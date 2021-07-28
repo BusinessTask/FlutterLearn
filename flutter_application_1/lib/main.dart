@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/main2.dart';
 
 void main() {
   runApp(MyApp111());
@@ -61,6 +62,10 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+    //  跳转main2
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return new Login();
+    }));
   }
 
   @override
@@ -97,9 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times 1112 :',
-            ),
+            Text('You have pushed the button this many times 1112 :'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
